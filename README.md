@@ -1,6 +1,6 @@
 # UpdateCountersWithCondition
 
-TODO: Write a gem description
+update counters with condition
 
 ## Installation
 
