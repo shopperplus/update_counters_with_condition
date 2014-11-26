@@ -20,7 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+ProductStock.update_counters_with_condition({:product_id => Product.first.id, :warehouse_id => Warehouse.first.id}, :quantity => 1)
+```
 
 ## Contributing
 
