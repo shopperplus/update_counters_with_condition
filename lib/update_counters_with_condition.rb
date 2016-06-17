@@ -9,7 +9,7 @@ module ActiveRecord
           list << "#{connection.quote_column_name(counter_name)} = COALESCE(#{connection.quote_column_name(counter_name)}, 0) #{sign} #{increment.abs}"
         }.join(", ")
         condition = id.map{|column_name, value| "#{connection.quote_column_name(column_name)} = #{quote_value(value)}"}.join(" AND ")
-        update_all(updates, condition)
+        where(condition).update_all(updates)
       else
         update_counters(id, counters)
       end
